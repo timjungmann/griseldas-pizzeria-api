@@ -26,9 +26,9 @@ connect(process.env.MONGO_URI, {
   useFindAndModify: false,
   useCreateIndex: true,
 })
-.then(() => console.log(`Connection to DB established!!`))
+.then(() => console.log(`Connection to DB established.`))
 .catch((err) => {
-  console.log(`We can not connect to the DB ->`, err);
+  console.log(`Connection to DB couldn't be established:`, err);
 });
 
 
