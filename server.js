@@ -4,7 +4,6 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import pizzasRouter from './routes/pizzasRouter.js';
-import cartRouter from './routes/cartRouter.js';
 import ordersRouter from './routes/ordersRouter.js';
 import config from './config/config.js'
 
@@ -43,7 +42,6 @@ app.get('/', (req, res)=> {
   res.send({message: `Welcome to our Pizzeria`});
 });
 app.use('/pizzas', pizzasRouter);
-app.use('/cart', cartRouter);
 app.use('/orders', ordersRouter);
 
 
