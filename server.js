@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 
 import pizzasRouter from './routes/pizzasRouter.js';
 import cartRouter from './routes/cartRouter.js';
+import ordersRouter from './routes/ordersRouter.js';
 
 const app = express();
 const {connect} = mongoose;

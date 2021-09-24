@@ -3,8 +3,9 @@ const router = express.Router();
 
 import {
   getCartItems,
-  addOrder,
-  clearCart
+  changeQuantity
 } from '../controllers/cartControllers.js';
 
-router.route('/').get(getCartItems).post(addOrder).delete(clearCart);
+router.route('/').get(getCartItems).put(changeQuantity);
+
+export default router;
