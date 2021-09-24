@@ -2,13 +2,14 @@ import mongoose from 'mongoose';
 import Pizza from '../models/Pizza.js';
 import dotenv from 'dotenv';
 import faker from 'faker';
+import config from '../config/config.js';
 
 const {connect} = mongoose;
 dotenv.config();
 
 (async function() {
   // * ESTABLISH CONNECTION TO DB
-  connect(process.env.MONGO_URI, {
+  connect(config.mongooseUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
@@ -37,6 +38,7 @@ dotenv.config();
       image: faker.image.food(),
       name: 'Pizza ' + faker.random.word(),
       description: faker.lorem.words(10),
+      ingredients:["Flour", "Tomatos", "Cheese"],
       price: faker.commerce.price(7, 16),
       isVegan: faker.datatype.boolean()
     }
