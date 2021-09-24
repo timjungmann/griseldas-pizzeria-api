@@ -42,6 +42,8 @@ app.get('/', (req, res)=> {
 });
 app.use('/pizzas', pizzasRouter);
 app.use('/cart', cartRouter);
+app.use('/orders', ordersRouter);
+
 
 
 //* ANY OTHER ROUTE
