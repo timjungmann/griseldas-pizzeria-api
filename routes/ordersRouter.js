@@ -6,6 +6,7 @@ import {
   addOrder
 } from '../controllers/ordersControllers.js';
 
-router.route('/:id').get(getOrder).post(addOrder);
+router.route('/').post(addOrder);
+router.route('/:id').get(getOrder);
 
 export default router;

@@ -27,8 +27,7 @@ const PizzaSchema = new Schema({
       required: true
   }
 },{
-  versionKey: false,
-  timestamps: true
+  versionKey: false
 });
 
 const Pizza = model('Pizza', PizzaSchema);

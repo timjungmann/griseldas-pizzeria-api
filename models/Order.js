@@ -4,19 +4,44 @@ const { Schema, model } = mongoose;
 const OrderSchema = new Schema({
   pizzas:[
     {
-      pizza:{
-      type: Schema.Types.ObjectId,
-      ref:'Pizza'
-      },
       quantity:{
         type:Number,
         required:true
+      },
+      image: {
+        type: String,
+        required: true
+      },
+      name: {
+          type: String,
+          required: true
+      },
+      description: {
+          type: String,
+          required: true
+      },
+      price: {
+          type: Number,
+          required: true 
+      },
+      ingredients: {
+          type: Array,
+          required: false
+      },
+      isVegan: {
+          type: Boolean,
+          required: true
+      },
+      _id: {
+        type: Schema.Types.ObjectId,
+        required: true
       }
+    },{
+      versionKey: false,
+      timestamps: true
     }
   ]
-},{
-  versionKey:false
-})
+});
 
 const Order = model('Order', OrderSchema);
 export default Order;
