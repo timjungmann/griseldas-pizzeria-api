@@ -28,7 +28,7 @@ const OrderSchema = new Schema({
           type: Array,
           required: false
       },
-      isVegan: {
+      isVeg: {
           type: Boolean,
           required: true
       },
@@ -36,12 +36,12 @@ const OrderSchema = new Schema({
         type: Schema.Types.ObjectId,
         required: true
       }
-    },{
-      versionKey: false,
-      timestamps: true
     }
   ]
-});
+},{
+      versionKey: false,
+      timestamps: true
+    });
 
 const Order = model('Order', OrderSchema);
 export default Order;
