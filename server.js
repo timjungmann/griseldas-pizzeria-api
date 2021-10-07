@@ -34,12 +34,12 @@ connect(config.mongooseUrl, {
 
 // * EXPRESS MIDDLEWARE
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin: config.frontendOrigin}));
 
 
 // * ENDPOINTS
 app.get('/', (req, res)=> {
-  res.send({message: `Welcome to our Pizzeria`});
+  res.send({message: `Welcome to Griselda's Pizzeria`});
 });
 app.use('/pizzas', pizzasRouter);
 app.use('/orders', ordersRouter);

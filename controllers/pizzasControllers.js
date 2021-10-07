@@ -20,14 +20,6 @@ export const addPizza = async(req,res)=>{
   }
 }
 
-// export const getPizza = async(req,res)=>{
-//   try {
-    
-//   } catch (err) {
-//     next(err)
-//   }
-// }
-
 export const deletePizza = async(req,res)=>{
   const {id} = req.params;
   try {
